@@ -3,7 +3,7 @@ import { Router } from '@reach/router';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import Home from './Home';
-import { UserContext } from '../providers/UserProvider'; 
+import { UserContext } from '../providers/UserProvider';
 
 function Application () {
     const user = useContext(UserContext);

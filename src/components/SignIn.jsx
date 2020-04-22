@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { signInWithGoogle, signInWithFacebook } from '../firebase';
+import { Button } from '@material-ui/core';
 
 function SignIn() {
 
@@ -29,7 +30,7 @@ function SignIn() {
     return (
         <div className="SignIn">
             <h1>Sign In</h1>
-            <div className="content">
+            <div className="container">
                 <form>
                     <label htmlFor="email">Email:</label>
                     <input type="email" id="email" name="email" value={email} onChange={handleInputChange}/>
@@ -39,8 +40,10 @@ function SignIn() {
                     <button>Sign In</button>
                 </form>
                 <p className="">or</p>
-                <button name="google" onClick={signIn}>Sign in with Google</button>
-                <button name="facebook" onClick={signIn}>Sign in with Facebook</button>
+                <div class="button-container">
+                    <Button color="secondary" variant="contained" name="google" onClick={signIn}>Sign in with Google</Button>
+                    <Button color="primary" variant="contained" name="facebook" onClick={signIn}>Sign in with Facebook</Button>
+                </div>
             </div>
         </div>
     );

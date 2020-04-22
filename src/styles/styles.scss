@@ -1,0 +1,10 @@
+.SignIn {
+    .button-container {
+        display: inline-flex;
+        flex-direction: column;
+
+        button {
+            margin: 5px 0;
+        }
+    }
+}
